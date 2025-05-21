@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Hatters - Музыкальная группа</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Шрифт -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- Шапка сайта -->
+<header>
+    <div class="container">
+        <div class="logo">
+            <img src="img/logo.png" alt="Логотип The Hatters">
+        </div>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="#home" class="active">Главная</a></li>
+                <li><a href="#about">О группе</a></li>
+                <li><a href="#music">Музыка</a></li>
+                <li><a href="#tour">Концерты</a></li>
+                <li><a href="#photo-gallery">Фото</a></li>
+                <li><a href="#video-section">Видео</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<!-- Главный экран -->
+<section id="home" class="hero">
+    <div class="hero-content">
+        <h1 class="animate-on-scroll">The Hatters</h1>
+        <p class="animate-on-scroll">Музыка, которая объединяет поколения</p>
+        <a href="#music" class="btn animate-on-scroll">Слушать сейчас</a>
+    </div>
+</section>
+
+<!-- О группе -->
+<section id="about" class="about">
+    <div class="container">
+        <h2 class="section-title animate-on-scroll">О группе</h2>
+        <div class="about-content">
+            <div class="about-image animate-on-scroll">
+                <img src="img/band.jpg" alt="Группа The Hatters">
+            </div>
+            <div class="about-text animate-on-scroll">
+                <h3>Наша история</h3>
+                <p>The Hatters — российская рок-группа, основанная в 2016 году в Санкт-Петербурге. В основной состав группы входят Юрий Музыченко, Павел Личадеев, Александр «Кикир» Анисимов, Дмитрий Вечеринин, Анна Музыченко.</p>
+                <p>С момента основания The Hatters завоевали любовь публики благодаря своему неповторимому стилю и харизматичным выступлениям. Их концерты — это всегда яркое шоу, наполненное энергией и позитивом.</p>
+                <div class="band-members">
+                    <h3>Участники группы</h3>
+                    <ul>
+                        <li>Юрий Музыченко - вокал, голос, скрипка, электрогитара, клавишные</li>
+                        <li>Павел Личадеев - вокал, аккордеон, клавишные</li>
+                        <li>Анна Музыченко - бэк-вокал, перкуссия</li>
+                        <li>Александр Анисимов - бас</li>
+                        <li>Алексей Кузнецов - ударные</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Музыка -->
+<section id="music" class="music">
+    <div class="container">
+        <h2 class="section-title animate-on-scroll">Наша музыка</h2>
+        <div class="yandex-music-widget animate-on-scroll">
+            <iframe frameborder="0" allow="clipboard-write" style="border:none;width:100%;height:556px;max-width:614px;margin:0 auto;display:block;" src="https://music.yandex.ru/iframe/playlist/yamusic-bestsongs/4652316">Слушайте <a href="https://music.yandex.ru/playlists/ar.03f88906-8b2d-4097-bdca-ddc592311f5e">Лучшее: The Hatters</a> — <a href="https://music.yandex.ru/users/yamusic-bestsongs">Яндекс Музыка</a> на Яндекс Музыке</iframe>
+        </div>
+    </div>
+</section>
+
+<!-- Концерты -->
+<section id="tour" class="tour">
+    <div class="container">
+        <h2 class="section-title animate-on-scroll">Расписание концертов</h2>
+
+        <!-- Май 2025 -->
+        <div class="tour-month animate-on-scroll">
+            <h3 class="month-title">Май, 2025</h3>
+            <div class="tour-dates">
+                <div class="tour-date">
+                    <div class="date">
+                        <span class="day">8</span>
+                        <span class="month">МАЙ</span>
+                    </div>
+                    <div class="venue">
+                        <h3>DOM 71</h3>
+                        <p>Абакан</p>
+                        <p class="time">Четверг, двери: 18:00, начало 19:00</p>
+                    </div>
+                    <div class="price">
+                        <p>от 2000 р.</p>
+                        <button class="btn-small buy-ticket" data-concert="DOM 71, Абакан" data-date="8 мая 2025" data-time="19:00" data-price="2000">Билеты</button>
+                    </div>
+                </div>
+
+                <div class="tour-date">
+                    <div class="date">
+                        <span class="day">9</span>
+                        <span class="month">МАЙ</span>
+                    </div>
+                    <div class="venue">
+                        <h3>Ангар</h3>
+                        <p>Омск</p>
+                        <p class="time">Пятница, двери: 19:00, начало 20:00</p>
+                    </div>
+                    <div class="price">
+                        <p>от 2000 р.</p>
+                        <button class="btn-small buy-ticket" data-concert="Ангар, Омск" data-date="9 мая 2025" data-time="20:00" data-price="2000">Билеты</button>
+                    </div>
+                </div>
+
+                <div class="tour-date">
+                    <div class="date">
+                        <span class="day">10</span>
+                        <span class="month">МАЙ</span>
+                    </div>
+                    <div class="venue">
+                        <h3>Ангар (ДОПОЛНИТЕЛЬНЫЙ КОНЦЕРТ)</h3>
+                        <p>Омск</p>
+                        <p class="time">Суббота, двери: 19:00, начало 20:00</p>
+                    </div>
+                    <div class="price">
+                        <p>от 2000 р.</p>
+                        <button class="btn-small buy-ticket" data-concert="Ангар (ДОПОЛНИТЕЛЬНЫЙ КОНЦЕРТ), Омск" data-date="10 мая 2025" data-time="20:00" data-price="2000">Билеты</button>
+                    </div>
+                </div>
+
+                <div class="tour-date">
+                    <div class="date">
+                        <span class="day">14</span>
+                        <span class="month">МАЙ</span>
+                    </div>
+                    <div class="venue">
+                        <h3>Физкультурно-спортивный комплекс</h3>
+                        <p>Улан-Удэ</p>
+                        <p class="time">Среда, двери: 19:00, начало 20:00</p>
+                    </div>
+                    <div class="price">
+                        <p>от 2000 р.</p>
+                        <button class="btn-small buy-ticket" data-concert="Физкультурно-спортивный комплекс, Улан-Удэ" data-date="14 мая 2025" data-time="20:00" data-price="2000">Билеты</button>
+                    </div>
+                </div>
+
+                <div class="tour-date">
+                    <div class="date">
+                        <span class="day">16</span>
+                        <span class="month">МАЙ</span>
+                    </div>
+                    <div class="venue">
+                        <h3>Дворец спорта</h3>
+                        <p>Минск</p>
+                        <p class="time">Пятница, двери: 19:00, начало 20:00</p>
+                    </div>
+                    <div class="price">
+                        <p>от 70 BYN</p>
+                        <button class="btn-small buy-ticket" data-concert="Дворец спорта, Минск" data-date="16 мая 2025" data-time="20:00" data-price="70" data-currency="BYN">Билеты</button>
+                    </div>
+                </div>
+
+                <div class="tour-date">
+                    <div class="date">
+                        <span class="day">20</span>
+                        <span class="month">МАЙ</span>
+                    </div>
+                    <div class="venue">
+                        <h3>Руки Вверх Бар</h3>
+                        <p>Череповец</p>
+                        <p class="time">Вторник, двери: 19:00, начало 20:00</p>
+                    </div>
+                    <div class="price">
+                        <p>от 2000 р.</p>
+                        <button class="btn-small buy-ticket" data-concert="Руки Вверх Бар, Череповец" data-date="20 мая 2025" data-time="20:00" data-price="2000">Билеты</button>
+                    </div>
+                </div>
+
+                <div class="tour-date">
+                    <div class="date">
+                        <span class="day">22</span>
+                        <span class="month">МАЙ</span>
+                    </div>
+                    <div class="venue">
+                        <h3>Deep Club</h3>
+                        <p>Рязань</p>
+                        <p class="time">Четверг, двери: 19:00, начало 20:00</p>
+                    </div>
+                    <div class="price">
+                        <p>от 2000 р.</p>
+                        <button class="btn-small buy-ticket" data-concert="Deep Club, Рязань" data-date="22 мая 2025" data-time="20:00" data-price="2000">Билеты</button>
+                    </div>
+                </div>
+
+                <div class="tour-date">
+                    <div class="date">
+                        <span class="day">23</span>
+                        <span class="month">МАЙ</span>
+                    </div>
+                    <div class="venue">
+                        <h3>КСК Вознесенский</h3>
+                        <p>Ярославль</p>
+                        <p class="time">Пятница, двери: 19:00, начало 20:00</p>
+                    </div>
+                    <div class="price">
+                        <p>от 1600 р.</p>
+                        <button class="btn-small buy-ticket" data-concert="КСК Вознесенский, Ярославль" data-date="23 мая 2025" data-time="20:00" data-price="1600">Билеты</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Июнь 2025 -->
+        <div class="tour-month animate-on-scroll">
+            <h3 class="month-title">Июнь, 2025</h3>
+            <div class="tour-dates">
+                <div class="tour-date">
+                    <div class="date">
+                        <span class="day">1</span>
+                        <span class="month">ИЮН</span>
+                    </div>
+                    <div class="venue">
+                        <h3>Гринн Центр</h3>
+                        <p>Орёл</p>
+                        <p class="time">Воскресенье, двери: 19:00, начало 20:00</p>
+                    </div>
+                    <div class="price">
+                        <p>от 1800 р.</p>
+                        <button class="btn-small buy-ticket" data-concert="Гринн Центр, Орёл" data-date="1 июня 2025" data-time="20:00" data-price="1800">Билеты</button>
+                    </div>
+                </div>
+
+                <div class="tour-date">
+                    <div class="date">
+                        <span class="day">6</span>
+                        <span class="month">ИЮН</span>
+                    </div>
+                    <div class="venue">
+                        <h3>Royal Park</h3>
+                        <p>Калининград</p>
+                        <p class="time">Пятница, двери: 19:00, начало 20:00</p>
+                    </div>
+                    <div class="price">
+                        <p>от 1800 р.</p>
+                        <button class="btn-small buy-ticket" data-concert="Royal Park, Калининград" data-date="6 июня 2025" data-time="20:00" data-price="1800">Билеты</button>
+                    </div>
+                </div>
+
+                <div class="tour-date">
+                    <div class="date">
+                        <span class="day">21</span>
+                        <span class="month">ИЮН</span>
+                    </div>
+                    <div class="venue">
+                        <h3>Баржа</h3>
+                        <p>Ульяновск</p>
+                        <p class="time">Суббота, начало 13:00</p>
+                    </div>
+                    <div class="price">
+                        <p>от 750 р.</p>
+                        <button class="btn-small buy-ticket" data-concert="Баржа, Ульяновск" data-date="21 июня 2025" data-time="13:00" data-price="750">Билеты</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Октябрь 2025 -->
+        <div class="tour-month animate-on-scroll">
+            <h3 class="month-title">Октябрь, 2025</h3>
+            <div class="tour-dates">
+                <div class="tour-date">
+                    <div class="date">
+                        <span class="day">4</span>
+                        <span class="month">ОКТ</span>
+                    </div>
+                    <div class="venue">
+                        <h3>Ледовый Дворец</h3>
+                        <p>Санкт-Петербург</p>
+                        <p class="time">Суббота, двери: 19:00, начало 20:00</p>
+                    </div>
+                    <div class="price">
+                        <p>от 1800 р.</p>
+                        <button class="btn-small buy-ticket" data-concert="Ледовый Дворец, Санкт-Петербург" data-date="4 октября 2025" data-time="20:00" data-price="1800">Билеты</button>
+                    </div>
+                </div>
+
+                <div class="tour-date">
+                    <div class="date">
+                        <span class="day">16</span>
+                        <span class="month">ОКТ</span>
+                    </div>
+                    <div class="venue">
+                        <h3>ВТБ Арена</h3>
+                        <p>Москва</p>
+                        <p class="time">Четверг, двери: 19:00, начало 20:00</p>
+                    </div>
+                    <div class="price">
+                        <p>от 1800 р.</p>
+                        <button class="btn-small buy-ticket" data-concert="ВТБ Арена, Москва" data-date="16 октября 2025" data-time="20:00" data-price="1800">Билеты</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Фотогалерея -->
+<section id="photo-gallery" class="photo-gallery">
+    <div class="container">
+        <h2 class="section-title animate-on-scroll">Фотогалерея</h2>
+
+        <!-- Сетка изображений -->
+        <div class="photo-grid animate-on-scroll">
+            <div class="photo-item">
+                <img src="img/21.jpg" alt="Фото The Hatters 1">
+            </div>
+            <div class="photo-item">
+                <img src="img/22.jpg" alt="Фото The Hatters 2">
+            </div>
+            <div class="photo-item">
+                <img src="img/23.jpg" alt="Фото The Hatters 3">
+            </div>
+            <div class="photo-item">
+                <img src="img/24.jpg" alt="Фото The Hatters 4">
+            </div>
+            <div class="photo-item">
+                <img src="img/images.jfif" alt="Фото The Hatters 5">
+            </div>
+            <div class="photo-item">
+                <img src="img/The-Hatters.jpg" alt="Фото The Hatters 6">
+            </div>
+            <div class="photo-item">
+                <img src="img/the_hatters_16.jpg" alt="Фото The Hatters 7">
+            </div>
+            <div class="photo-item">
+                <img src="img/unnamed.jpg" alt="Фото The Hatters 8">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Видео секция -->
+<section id="video-section" class="video-section">
+    <div class="container">
+        <h2 class="section-title animate-on-scroll">Видео</h2>
+        <div class="video-container animate-on-scroll">
+            <video src="img/video.mp4" controls playsinline preload="metadata"></video>
+        </div>
+    </div>
+</section>
+
+<!-- Контакты -->
+<section id="contact" class="contact">
+    <div class="container">
+        <h2 class="section-title animate-on-scroll">Связаться с нами</h2>
+        <div class="contact-content">
+            <div class="contact-info animate-on-scroll">
+                <h3>Наши контакты</h3>
+                <p><i class="fas fa-envelope"></i> info@thehatters.ru</p>
+                <p><i class="fas fa-phone"></i> +7 (999) 123-4567</p>
+                <p><i class="fas fa-map-marker-alt"></i> ул. Музыкальная, 123, Санкт-Петербург</p>
+                <div class="social-links">
+                    <a href="https://vk.com/thehatters"><i class="fab fa-vk"></i></a>
+                    <a href="https://t.me/thehttrs/"><i class="fab fa-telegram"></i></a>
+                    <a href="https://www.instagram.com/thehttrs/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/c/THEHATTERSBAND/"><i class="fab fa-youtube"></i></a>
+                    <a href="https://open.spotify.com/artist/7JuLr3YC53QjWBcw2el44G?si=vphrtGpRRXu2ng0Fwd5WAw"><i class="fab fa-spotify"></i></a>
+                </div>
+            </div>
+            <div class="contact-form animate-on-scroll">
+                <h3>Получать новости о концертах</h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="city" placeholder="Ваш город" required>
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Ваш email" required>
+                        <span class="error-message"></span>
+                    </div>
+                    <button type="submit" class="btn">Подписаться на новости</button>
+                </form>
+                <div id="formSuccess" class="form-success">
+                    <p>Спасибо! Вы успешно подписались на новости о концертах.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Подвал сайта -->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="img/logo.png" alt="Логотип The Hatters">
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#home">Главная</a></li>
+                    <li><a href="#about">О группе</a></li>
+                    <li><a href="#music">Музыка</a></li>
+                    <li><a href="#tour">Концерты</a></li>
+                    <li><a href="#photo-gallery">Фото</a></li>
+                    <li><a href="#video-section">Видео</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 The Hatters. Все права защищены.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Кнопка "Наверх" -->
+<a href="#home" class="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+</a>
+
+<!-- Модальное окно для покупки билетов -->
+<div id="ticketModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>Заказ билетов</h2>
+        <div class="concert-info">
+            <p id="concertVenue">Концерт: <span></span></p>
+            <p id="concertDate">Дата: <span></span></p>
+            <p id="concertTime">Время: <span></span></p>
+            <p id="ticketPrice">Цена: от <span></span></p>
+        </div>
+        <form id="ticketForm">
+            <div class="form-group">
+                <label for="ticketType">Тип билета:</label>
+                <select id="ticketType" required>
+                    <option value="standard">Стандарт</option>
+                    <option value="vip">VIP</option>
+                    <option value="fan-zone">Фан-зона</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="ticketQuantity">Количество билетов:</label>
+                <div class="quantity-selector">
+                    <button type="button" class="quantity-btn minus">-</button>
+                    <input type="number" id="ticketQuantity" min="1" max="10" value="1" required>
+                    <button type="button" class="quantity-btn plus">+</button>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="buyerName">Ваше имя:</label>
+                <input type="text" id="buyerName" required>
+                <span class="error-message"></span>
+            </div>
+            <div class="form-group">
+                <label for="buyerEmail">Email:</label>
+                <input type="email" id="buyerEmail" required>
+                <span class="error-message"></span>
+            </div>
+            <div class="form-group">
+                <label for="buyerPhone">Телефон:</label>
+                <input type="tel" id="buyerPhone" placeholder="+7 (___) ___-__-__" required>
+                <span class="error-message"></span>
+            </div>
+            <div class="total-price">
+                <p>Итого: <span id="totalAmount">0</span></p>
+            </div>
+            <div class="form-group">
+                <label class="checkbox-container">
+                    <input type="checkbox" id="agreeTerms" required>
+                    <span class="checkmark"></span>
+                    Я согласен с <a href="#" class="terms-link">условиями покупки</a>
+                </label>
+            </div>
+            <button type="submit" class="btn">Оформить заказ</button>
+        </form>
+        <div id="ticketSuccess" class="form-success">
+            <p>Спасибо за заказ! Информация о билетах отправлена на ваш email.</p>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript -->
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -3,6 +3,7 @@
  * Основной JavaScript файл
  */
 
+
 // Ждем полной загрузки DOM
 document.addEventListener('DOMContentLoaded', function() {
     // ===== Мобильное меню =====

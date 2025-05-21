@@ -584,7 +584,7 @@ nav {
     border-color: #e74c3c;
 }
 
-/* Улучшенные стили для уведомления об успехе */
+/* Cтили для уведомления об успехе */
 .form-success {
     background-color: #dff0d8;
     color: #3c763d;
@@ -968,7 +968,6 @@ footer {
     text-align: center;
 }
 
-/* Исправление для Yandex Music виджета */
 .yandex-music-widget {
     width: 100%;
     max-width: 614px;
@@ -1075,13 +1074,12 @@ footer {
         max-height: 60vh;
     }
 
-    /* Улучшаем отображение секции концертов */
     .tour-date {
         flex-wrap: wrap;
     }
 
     .venue {
-        width: calc(100% - 100px); /* Ширина с учетом даты */
+        width: calc(100% - 100px);
     }
 
     .price {
@@ -1092,7 +1090,6 @@ footer {
         align-items: center;
     }
 
-    /* Исправляем проблему с Yandex Music виджетом */
     .yandex-music-widget iframe {
         max-width: 100%;
         width: 100%;
@@ -1165,7 +1162,6 @@ footer {
         gap: 10px;
     }
 
-    /* Улучшаем отображение Yandex Music виджета */
     .yandex-music-widget {
         display: flex;
         justify-content: center;
@@ -1180,7 +1176,6 @@ footer {
         height: 450px;
     }
 
-    /* Улучшаем отображение модального окна */
     .modal-content {
         width: 95%;
         padding: 15px;
@@ -1216,19 +1211,16 @@ footer {
         height: 400px;
     }
 
-    /* Улучшаем отображение формы */
     .form-group input,
     .form-group textarea {
         padding: 10px;
         font-size: 0.9rem;
     }
 
-    /* Улучшаем отображение социальных иконок */
     .social-links {
         justify-content: center;
     }
 
-    /* Улучшаем отображение кнопки наверх */
     .back-to-top {
         width: 40px;
         height: 40px;
@@ -1259,7 +1251,6 @@ footer {
         font-size: 1.1rem;
     }
 
-    /* Улучшаем отображение модального окна на очень маленьких экранах */
     .modal-content {
         padding: 10px;
     }

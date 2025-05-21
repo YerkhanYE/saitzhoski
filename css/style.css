@@ -1,0 +1,1274 @@
+/* 
+* The Hatters - Сайт музыкальной группы
+* Основные стили
+*/
+
+/* ===== СБРОС И БАЗОВЫЕ СТИЛИ ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100%; /* Предотвращаем выход элементов за пределы родителя */
+}
+
+html,
+body {
+    overflow-x: hidden; /* Предотвращаем горизонтальный скролл */
+    width: 100%;
+    position: relative;
+}
+
+/* Добавляем плавную прокрутку для всего сайта */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    overflow: hidden; /* Предотвращаем выход содержимого за пределы контейнера */
+}
+
+section {
+    padding: 80px 0;
+    width: 100%;
+    overflow: hidden; /* Предотвращаем выход содержимого за пределы секции */
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    position: relative;
+    word-wrap: break-word; /* Разрешаем перенос длинных слов */
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right, #e74c3c, #c0392b);
+}
+
+.btn {
+    display: inline-block;
+    background: linear-gradient(to right, #e74c3c, #c0392b);
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: linear-gradient(to right, #c0392b, #e74c3c);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.btn-small {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    border-radius: 20px;
+    background: linear-gradient(to right, #e74c3c, #c0392b);
+    color: #fff;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.btn-small:hover {
+    background: linear-gradient(to right, #c0392b, #e74c3c);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== ШАПКА САЙТА ===== */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #e74c3c;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu {
+    display: flex;
+}
+
+.nav-menu li {
+    margin-left: 25px;
+}
+
+.nav-menu a {
+    font-weight: 600;
+    position: relative;
+}
+
+.nav-menu a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #e74c3c;
+    transition: width 0.3s ease;
+}
+
+.nav-menu a:hover::after,
+.nav-menu a.active::after {
+    width: 100%;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease;
+    background-color: #333;
+}
+
+/* ===== ГЛАВНЫЙ ЭКРАН ===== */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/hero-bg.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    overflow: hidden; /* Предотвращаем выход содержимого за пределы секции */
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 0 20px;
+    width: 100%; /* Обеспечиваем полную ширину на мобильных устройствах */
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    word-wrap: break-word; /* Разрешаем перенос длинных слов */
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+/* ===== О ГРУППЕ ===== */
+.about {
+    background-color: #fff;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.about-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-image img {
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Обеспечиваем полную ширину на мобильных устройствах */
+}
+
+.about-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-text h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #e74c3c;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+}
+
+.band-members {
+    margin-top: 30px;
+}
+
+.band-members ul {
+    margin-top: 15px;
+}
+
+.band-members li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.band-members li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #e74c3c;
+}
+
+/* ===== МУЗЫКА ===== */
+.music {
+    background-color: #f8f8f8;
+}
+
+.albums {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.album {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.album:hover {
+    transform: translateY(-10px);
+}
+
+.album-cover img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.album-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.album-info h3 {
+    margin-bottom: 10px;
+    color: #e74c3c;
+}
+
+.album-info p {
+    margin-bottom: 15px;
+    color: #777;
+}
+
+/* ===== КОНЦЕРТЫ ===== */
+.tour {
+    background-color: #fff;
+}
+
+.tour-dates {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.tour-date {
+    display: flex;
+    align-items: center;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    flex-wrap: wrap; /* Разрешаем перенос на мобильных устройствах */
+}
+
+.tour-date:hover {
+    transform: translateX(10px);
+}
+
+.date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(to right, #e74c3c, #c0392b);
+    color: #fff;
+    border-radius: 10px;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.day {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.month {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.venue {
+    flex: 1;
+    min-width: 0; /* Предотвращаем выход содержимого за пределы контейнера */
+}
+
+.venue h3 {
+    margin-bottom: 5px;
+    word-wrap: break-word; /* Разрешаем перенос длинных слов */
+}
+
+.venue p {
+    color: #777;
+}
+
+.tour-date .btn-small {
+    margin-left: auto;
+}
+
+/* ===== ФОТОГАЛЕРЕЯ ===== */
+.photo-gallery {
+    background-color: #f8f8f8;
+    padding: 80px 0;
+}
+
+/* Стили для сетки изображений */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.photo-item {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    aspect-ratio: 1 / 1;
+}
+
+.photo-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.photo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.photo-item:hover img {
+    transform: scale(1.05);
+}
+
+/* ===== ВИДЕО СЕКЦИЯ ===== */
+.video-section {
+    background-color: #fff;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+    display: block;
+    object-fit: contain;
+}
+
+/* ===== КОНТАКТЫ ===== */
+.contact {
+    background-color: #f8f8f8;
+}
+
+.contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #e74c3c;
+}
+
+.contact-info p {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    word-wrap: break-word; /* Разрешаем перенос длинных слов */
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: #e74c3c;
+    width: 20px;
+    flex-shrink: 0; /* Предотвращаем сжатие иконок */
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap; /* Разрешаем перенос на мобильных устройствах */
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #f8f8f8;
+    border-radius: 50%;
+    color: #e74c3c;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: #e74c3c;
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-form h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #e74c3c;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #e74c3c;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.2);
+}
+
+.form-group textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 0.85rem;
+    margin-top: 5px;
+    display: block;
+}
+
+.form-group.error input,
+.form-group.error textarea {
+    border-color: #e74c3c;
+}
+
+/* Улучшенные стили для уведомления об успехе */
+.form-success {
+    background-color: #dff0d8;
+    color: #3c763d;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    display: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #5cb85c;
+    text-align: center;
+}
+
+.form-success .success-icon {
+    font-size: 3rem;
+    color: #5cb85c;
+    margin-bottom: 15px;
+}
+
+.form-success h3 {
+    color: #3c763d;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.form-success p {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+/* Анимация для уведомления */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-success {
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+/* ===== ПОДВАЛ САЙТА ===== */
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 60px 0 20px;
+    overflow: hidden; /* Предотвращаем выход содержимого за пределы футера */
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.footer-logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.footer-logo h2 {
+    font-size: 1.5rem;
+    color: #e74c3c;
+}
+
+.footer-links ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #ccc;
+}
+
+.footer-links a:hover {
+    color: #e74c3c;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    color: #999;
+    font-size: 0.9rem;
+}
+
+/* ===== КНОПКА "НАВЕРХ" ===== */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: #e74c3c;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background-color: #c0392b;
+    transform: translateY(-5px);
+}
+
+/* ===== АНИМАЦИИ ===== */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.animate-on-scroll.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== МОДАЛЬНОЕ ОКНО ===== */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.show {
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    transform: translateY(-50px);
+    opacity: 0;
+    transition: all 0.4s ease;
+    overflow: hidden; /* Предотвращаем выход содержимого за пределы модального окна */
+}
+
+.modal.show .modal-content {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-modal:hover {
+    color: #e74c3c;
+}
+
+.modal h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #e74c3c;
+}
+
+.concert-info {
+    background-color: #f8f8f8;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.concert-info p {
+    margin-bottom: 8px;
+    font-size: 1rem;
+    word-wrap: break-word; /* Разрешаем перенос длинных слов */
+}
+
+.concert-info span {
+    font-weight: 600;
+}
+
+.modal .form-group {
+    margin-bottom: 20px;
+}
+
+.modal label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.modal select,
+.modal input[type="text"],
+.modal input[type="email"],
+.modal input[type="tel"],
+.modal input[type="number"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.modal select:focus,
+.modal input:focus {
+    border-color: #e74c3c;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.2);
+}
+
+.quantity-selector {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-btn {
+    width: 40px;
+    height: 40px;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.quantity-btn.minus {
+    border-radius: 5px 0 0 5px;
+}
+
+.quantity-btn.plus {
+    border-radius: 0 5px 5px 0;
+}
+
+.quantity-btn:hover {
+    background-color: #e74c3c;
+    color: #fff;
+    border-color: #e74c3c;
+}
+
+#ticketQuantity {
+    width: 60px;
+    text-align: center;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+}
+
+.total-price {
+    background-color: #f8f8f8;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px 0;
+    text-align: right;
+}
+
+.total-price p {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+#totalAmount {
+    color: #e74c3c;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    font-size: 1rem;
+    user-select: none;
+}
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.checkbox-container:hover input ~ .checkmark {
+    background-color: #f0f0f0;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+    background-color: #e74c3c;
+    border-color: #e74c3c;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.checkbox-container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.terms-link {
+    color: #e74c3c;
+    text-decoration: underline;
+}
+
+#ticketSuccess {
+    margin-top: 20px;
+}
+
+/* ===== СТИЛИ ДЛЯ МЕСЯЦЕВ КОНЦЕРТОВ ===== */
+.tour-month {
+    margin-bottom: 40px;
+}
+
+.month-title {
+    font-size: 1.8rem;
+    color: #e74c3c;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Исправление для Yandex Music виджета */
+.yandex-music-widget {
+    width: 100%;
+    max-width: 614px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.yandex-music-widget iframe {
+    max-width: 100%;
+    width: 100%;
+    border: none;
+}
+
+/* ===== АДАПТИВНЫЕ СТИЛИ ===== */
+@media (max-width: 992px) {
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+    .hero-content h1 {
+        font-size: 3.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.3rem;
+    }
+
+    .photo-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .video-container video {
+        max-height: 70vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        padding: 20px 0;
+        height: calc(100vh - 70px); /* Высота на весь экран минус высота шапки */
+        overflow-y: auto; /* Добавляем скролл если меню не помещается */
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-menu li {
+        margin: 15px 0;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
+    .about-content,
+    .contact-content {
+        flex-direction: column;
+    }
+
+    .photo-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .video-container {
+        border-radius: 8px;
+    }
+
+    .video-container video {
+        max-height: 60vh;
+    }
+
+    /* Улучшаем отображение секции концертов */
+    .tour-date {
+        flex-wrap: wrap;
+    }
+
+    .venue {
+        width: calc(100% - 100px); /* Ширина с учетом даты */
+    }
+
+    .price {
+        margin-top: 15px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Исправляем проблему с Yandex Music виджетом */
+    .yandex-music-widget iframe {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    section {
+        padding: 60px 0;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 40px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+
+    .tour-date {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .date {
+        margin-right: 0;
+    }
+
+    .venue {
+        width: 100%;
+    }
+
+    .tour-date .btn-small {
+        margin-left: 0;
+        align-self: flex-start;
+    }
+
+    .price {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .price p {
+        margin-bottom: 10px;
+    }
+
+    .photo-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .video-container video {
+        max-height: 50vh;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-links ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Улучшаем отображение Yandex Music виджета */
+    .yandex-music-widget {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        max-width: 100%;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .yandex-music-widget iframe {
+        max-width: 100%;
+        height: 450px;
+    }
+
+    /* Улучшаем отображение модального окна */
+    .modal-content {
+        width: 95%;
+        padding: 15px;
+        margin: 10% auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+    }
+
+    .about-text h3,
+    .contact-info h3,
+    .contact-form h3 {
+        font-size: 1.5rem;
+    }
+
+    .yandex-music-widget iframe {
+        height: 400px;
+    }
+
+    /* Улучшаем отображение формы */
+    .form-group input,
+    .form-group textarea {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    /* Улучшаем отображение социальных иконок */
+    .social-links {
+        justify-content: center;
+    }
+
+    /* Улучшаем отображение кнопки наверх */
+    .back-to-top {
+        width: 40px;
+        height: 40px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+/* ===== ДОПОЛНИТЕЛЬНЫЕ СТИЛИ ДЛЯ АДАПТИВНОСТИ ===== */
+@media (max-width: 380px) {
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .section-title::after {
+        width: 60px;
+    }
+
+    .tour-month .month-title {
+        font-size: 1.5rem;
+    }
+
+    .day {
+        font-size: 1.5rem;
+    }
+
+    .venue h3 {
+        font-size: 1.1rem;
+    }
+
+    /* Улучшаем отображение модального окна на очень маленьких экранах */
+    .modal-content {
+        padding: 10px;
+    }
+
+    .concert-info {
+        padding: 10px;
+    }
+
+    .modal h2 {
+        font-size: 1.3rem;
+    }
+}

@@ -1,1 +1,2 @@
-если что в releases есть архив 
+
+https://yerkhanye.github.io/saitzhoski/
